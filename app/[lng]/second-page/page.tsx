@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link"
 import { useTranslation } from "../../i18n"
 import Image from "next/image"

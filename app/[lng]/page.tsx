@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "../i18n"
@@ -31,7 +33,7 @@ export default async function Home({ params: { lng } }) {
         {t('to-client-page')}
       </Link>
 
-      
+
       </main>
       <div className="mt-8">
         <Footer lng={lng} />
