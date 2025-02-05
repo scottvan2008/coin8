@@ -1,4 +1,4 @@
-'use client'
+
 
 import { useTranslation } from '../../../i18n'
 import { FooterBase } from './FooterBase'

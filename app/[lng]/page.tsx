@@ -1,9 +1,11 @@
-'use client'
+
 
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "../i18n"
 import { Footer } from "./components/Footer"
+
+
 
 export default async function Home({ params: { lng } }) {
   const { t } = await useTranslation(lng)

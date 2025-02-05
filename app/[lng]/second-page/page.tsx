@@ -1,9 +1,12 @@
-'use client'
+
 
 import Link from "next/link"
-import { useTranslation } from "../../i18n"
+// import { useTranslation } from "../../i18n"
 import Image from "next/image"
-import { Footer } from "../components/Footer"
+// import { Footer } from "../components/Footer"
+
+import { useTranslation } from '../../i18n/client'
+import { Footer } from '../components/Footer/client'
 
 export default async function Page({ params: { lng } }) {
   const { t } = await useTranslation(lng, "second-page")
