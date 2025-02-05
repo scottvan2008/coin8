@@ -9,7 +9,8 @@ import { useTranslation } from '../../i18n/client'
 import { Footer } from '../components/Footer/client'
 
 export default async function Page({ params: { lng } }) {
-  const { t } = await useTranslation(lng, "second-page")
+  // const { t } = await useTranslation(lng, "second-page")
+  const { t } = useTranslation(lng, "second-page")
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-4">
