@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from 'next/link'
 import { useTranslation } from '../i18n'
+import { Footer } from "./components/Footer";
 
-export default function Home({ params: { lng } }) {
+export default async function Home({ params: { lng } }) {
+
+  const { t } = await useTranslation(lng)
+
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div >
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 
                 <Image
@@ -16,13 +21,14 @@ export default function Home({ params: { lng } }) {
           priority
         />
         <div>
-        <h1>Hi there!</h1>
+      <h1>{t('title')}</h1>
       <Link href={`/${lng}/second-page`}>
-        second page
+        {t('to-second-page')}
       </Link>
         </div>
 
       </main>
+      <Footer lng={lng} />
       
     </div>
   );
