@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link'
+import { useTranslation } from '../i18n'
 
 export default function Home({ params: { lng } }) {
   return (
