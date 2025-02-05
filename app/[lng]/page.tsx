@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link'
 import { useTranslation } from '../i18n'
-import { Footer } from "./components/Footer";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
 export default async function Home({ params: { lng } }) {
 
@@ -28,7 +28,7 @@ export default async function Home({ params: { lng } }) {
         </div>
 
       </main>
-      <Footer lng={lng} />
+      <LanguageSwitcher lng={lng} />
       
     </div>
   );

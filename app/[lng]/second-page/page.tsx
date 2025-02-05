@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useTranslation } from '../../i18n'
-import { Footer } from '../components/Footer'
+import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 export default async function Page({ params: { lng } }) {
 
@@ -13,7 +13,7 @@ export default async function Page({ params: { lng } }) {
         {t('back-to-home')}
       </Link>
 
-      <Footer lng={lng} />
+      <LanguageSwitcher lng={lng} />
     </>
   )
 }
