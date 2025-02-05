@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "../i18n"
-import { LanguageSwitcher } from "./components/LanguageSwitcher"
+import { Footer } from "./components/Footer"
 
 export default async function Home({ params: { lng } }) {
   const { t } = await useTranslation(lng)
@@ -26,9 +26,15 @@ export default async function Home({ params: { lng } }) {
         >
           {t("to-second-page")}
         </Link>
+
+        <Link href={`/${lng}/client-page`}>
+        {t('to-client-page')}
+      </Link>
+
+      
       </main>
       <div className="mt-8">
-        <LanguageSwitcher lng={lng} />
+        <Footer lng={lng} />
       </div>
     </div>
   )
