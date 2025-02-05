@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useTranslation } from "../../i18n"
 import { LanguageSwitcher } from "../components/LanguageSwitcher"
+import Image from "next/image"
 
 export default async function Page({ params: { lng } }) {
   const { t } = await useTranslation(lng, "second-page")
@@ -8,6 +9,16 @@ export default async function Page({ params: { lng } }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-4">
       <main className="flex flex-col items-center gap-8 max-w-2xl w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
+
+      <Image
+            className="dark:invert transition-transform hover:scale-110"
+            src="/logo.png"
+            alt="Next.js logo"
+            width={50}
+            height={50}
+            priority
+          />
+
         <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-300">{t("title")}</h1>
         <Link
           href={`/${lng}`}
